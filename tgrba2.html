@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>shaitt</title>
+        <style>
+       img {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        cursor:pointer;
+
+       }
+       img:hover {
+        transform: scale(1.1);
+        transition:0.5s;
+
+       }
+        </style>
+    </head>
+    <body>
+        <img src="0.jpg" id="d1" onmouseenter="stop()" onmouseleave="mnr()" style="top:250px;left:-200;" />
+        <img src="1.jpg" id="d2" onmouseenter="stop()" onmouseleave="mnr()" style="top:250px;left:100;" />
+        <img src="2.jpg" id="d3" onmouseenter="stop()" onmouseleave="mnr()" style="top:250px;left:400;" />
+        <img src="3.jpg" id="d4" onmouseenter="stop()" onmouseleave="mnr()" style="top:250px;left:700;" />
+        <img src="4.jpg" id="d5" onmouseenter="stop()" onmouseleave="mnr()" style="top:250px;left:1000;" />
+        <img src="5.jpg" id="d6" onmouseenter="stop()" onmouseleave="mnr()" style="top:250px;left:1300;" />
+        <img src="6.jpg" id="d7" onmouseenter="stop()" onmouseleave="mnr()" style="top:250px;left:1600;" />
+
+        <script>
+        let d1=document.getElementById("d1");
+        let d2=document.getElementById("d2");
+        let d3=document.getElementById("d3");
+        let d4=document.getElementById("d4");
+        let d5=document.getElementById("d5");
+        let d6=document.getElementById("d6");
+        let d7=document.getElementById("d7");
+
+
+        
+let ani;
+   let x=-200,y=100,z=400,a=700,b=1000,c=1300,d=1600;
+        function mnr() {
+          x=x+100;
+          y=y+100;
+          z=z+100;
+          a=a+100;
+          b=b+100;
+          c=c+100;
+          d=d+100;      
+          d1.style.left=x;
+          d2.style.left=y;
+          d3.style.left=z;
+          d4.style.left=a;
+          d5.style.left=b;
+          d6.style.left=c;
+          d7.style.left=d;
+          if(x>1400){
+            d1.style.display='none';
+          }
+          if(x>1800){
+            x=-200;
+            d1.style.display='block';
+          }    
+          if(y>1400){
+            d2.style.display='none';
+          }
+          if(y>1800){
+            y=-200;
+            d2.style.display='block';
+          }        
+          if(z>1400){
+            d3.style.display='none';
+          }
+          if(z>1800){
+            z=-200;
+            d3.style.display='block';
+          }        
+          if(a>1400){
+            d4.style.display='none';
+          }
+          if(a>1800){
+            a=-200;
+            d4.style.display='block';
+          }        
+          if(b>1400){
+            d5.style.display='none';
+          }
+          if(b>1800){
+            b=-200;
+            d5.style.display='block';
+          }        
+          if(c>1400){
+            d6.style.display='none';
+          }
+          if(c>1800){
+            c=-200;
+            d6.style.display='block';
+          }        
+          if(d>1400){
+            d7.style.display='none';
+          }
+          if(d>1800){
+            d=-200;
+            d7.style.display='block';
+          }            
+         ani= setTimeout("mnr()",1000);
+        }
+        mnr();
+        function stop(){
+            clearTimeout(ani);
+        }
+        </script>
+    </body>
+</html>
